@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <Header></Header>
+      <hr className='my-5 w-11/12 mx-auto border-gray-300'/>
       <Main></Main>
       
     </div>
