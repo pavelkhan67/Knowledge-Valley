@@ -9,8 +9,8 @@ const Blog = ({ blog, handleWatchTime, handleBookmark }) => {
                 <div className='flex gap-4 '>
                     <img className='w-12 rounded-3xl shadow-xl' src={author_image} alt="" />
                     <div>
-                        <h1>{author_name}</h1>
-                        <p className='text-gray-500'>{publish_date}</p>
+                        <h1 className='font-bold'>{author_name}</h1>
+                        <p className='text-gray-500 text-sm'>{publish_date}</p>
                     </div>
                 </div>
                 <div className='flex gap-4'>

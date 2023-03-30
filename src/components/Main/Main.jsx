@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import Blog from '../Blog/Blog';
 import Sidebar from '../Sidebar/Sidebar';
 
@@ -22,7 +23,7 @@ const Main = () => {
 
     const handleBookmark = (blog) => {
         if (bookmark.includes(blog)) {
-            alert('dgfsdg')
+            toast('You Have Already Bookmarked This Blog')
         }
         else {
             let newBookmark = [...bookmark, blog];
