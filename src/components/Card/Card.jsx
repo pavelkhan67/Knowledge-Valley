@@ -4,7 +4,7 @@ const Card = ({ blog, handleWatchTime, handleBookmark }) => {
     const { id, author_name, blog_title, blog_image, author_image, publish_date, read_time } = blog
     return (
         <div className='mb-10'>
-            <img className='object-cover w-full rounded-lg mb-2' src={blog_image} alt="" />
+            <img className='object-cover w-full rounded-lg mb-5' src={blog_image} alt="" />
             <div className='flex justify-between items-center px-2'>
                 <div className='flex gap-4 '>
                     <img className='w-12 rounded-3xl shadow-xl' src={author_image} alt="" />
@@ -21,6 +21,7 @@ const Card = ({ blog, handleWatchTime, handleBookmark }) => {
                 </div>
             </div>
             <h1 className='text-2xl font-bold mt-4'>{blog_title}</h1>
+            <p className='text-gray-500 my-3 text-sm'>#beginners #programming</p>
             <p style={{display:'inline-block'}} onClick={()=>handleWatchTime(read_time)} className='cursor-pointer text-primary underline' href="">Mark as read</p>
             <hr className='border-gray-300 mt-5' />
         </div>

@@ -11,7 +11,7 @@ const Sidebar = ({ spendTime, bookmark }) => {
             <div className='bg-gray-200 rounded-md mt-5 py-5 px-4'>
                 <h1 className='font-bold'>Bookmarked Blogs : {count}</h1>
                 {
-                    bookmark.map(blog => <p className='bg-white w-11/12 mx-auto mt-5 p-2 rounded-md font-semibold'>{blog}</p>)
+                    bookmark.map(blog => <p className='bg-white w-11/12 mx-auto mt-3 p-2 rounded-md font-semibold'>{blog}</p>)
                 }
             </div>
         </div>
