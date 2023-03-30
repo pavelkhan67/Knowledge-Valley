@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
-import Blog from '../Blog/Blog';
+import Card from '../Card/Card';
 import Sidebar from '../Sidebar/Sidebar';
 
 const Main = () => {
@@ -39,15 +39,14 @@ const Main = () => {
     }, [])
     return (
         <div className='w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-5'>
-            <div className='col-span-3'>
+            <div className='col-span-4 lg:col-span-3'>
                 {
-                    blogs.map(blog => <Blog handleBookmark={handleBookmark} handleWatchTime={handleWatchTime} blog={blog} key={blog.id}></Blog>)
+                    blogs.map(blog => <Card handleBookmark={handleBookmark} handleWatchTime={handleWatchTime} blog={blog} key={blog.id}></Card>)
                 }
             </div>
-            <div className='col-span-1'>
+            <div className='col-span-4 lg:col-span-1'>
                 <Sidebar bookmark={bookmark} spendTime={spendTime}></Sidebar>
             </div>
-
         </div>
     );
 };

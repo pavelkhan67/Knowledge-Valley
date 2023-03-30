@@ -1,28 +1,15 @@
 import React from 'react';
 
-const Blog = ({ blog, handleWatchTime, handleBookmark }) => {
-    const { id, author_name, blog_title, blog_image, author_image, publish_date, read_time } = blog
+const Blog = () => {
     return (
-        <div className='mb-10'>
-            <img className='object-cover w-full rounded-lg mb-2' src={blog_image} alt="" />
-            <div className='flex justify-between items-center px-2'>
-                <div className='flex gap-4 '>
-                    <img className='w-12 rounded-3xl shadow-xl' src={author_image} alt="" />
-                    <div>
-                        <h1 className='font-bold'>{author_name}</h1>
-                        <p className='text-gray-500 text-sm'>{publish_date}</p>
-                    </div>
-                </div>
-                <div className='flex gap-4'>
-                    <p className='text-gray-500'>{read_time} min read</p>
-                    <p onClick={()=>handleBookmark(blog_title)} href=""><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
-                    </svg></p>
-                </div>
+        <div className='w-11/12 mx-auto mb-5 mt-5 lg:mt-0 '>
+            <h1 className='text-center font-bold text-2xl bg-gray-200 py-2 rounded-sm'>Blog Part</h1>
+            <div>
+                <h1 className='font-bold text-xl mt-4'>1. Props vs state.</h1>
+                <p className='mt-2'><span className='font-semibold'>Props:</span> Props are read-only components.Props are immutable. Props can be accessed by the child component. It is an object which stores the value of attributes of a tag and work similar to the HTML attributes. It allows passing data from one component to other components. It is similar to function arguments and can be passed to the component the same way as arguments passed in a function. Props are immutable so we cannot modify the props from inside the component.</p>
+                <p className='mt-2'><span className='font-semibold'>State:</span> The state is an updatable thing that is used to store data or information about the component and it can change over time. State is mutable. State cannot be accessed by child components. The change in state can happen as a response according to user action or system action. It is the main thing the react component, it can determine the behavior of the component and it's render process. It can only be accessed or modified inside the component or by the component directly.</p>
+
             </div>
-            <h1 className='text-2xl font-bold mt-4'>{blog_title}</h1>
-            <p style={{display:'inline-block'}} onClick={()=>handleWatchTime(read_time)} className='cursor-pointer text-primary underline' href="">Mark as read</p>
-            <hr className='border-gray-300 mt-6' />
         </div>
     );
 };
