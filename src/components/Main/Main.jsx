@@ -22,14 +22,14 @@ const Main = () => {
     };
 
     const handleBookmark = (blog) => {
+        let newBookmark = [...bookmark, blog];
         if (bookmark.includes(blog)) {
-            toast('You Have Already Bookmarked This Blog')
-        }
-        else {
-            let newBookmark = [...bookmark, blog];
+            toast('You Have Already Bookmarked This Blog!!')
             setBookmark(newBookmark)
         }
-
+        else {
+            setBookmark(newBookmark)
+        }
     }
 
     useEffect(() => {

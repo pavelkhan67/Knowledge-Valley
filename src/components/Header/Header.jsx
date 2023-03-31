@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div className="navbar mt-2 w-full lg:w-11/12 mx-auto">
             <div className="flex-1">
-                <h1 className=" font-bold text-2xl">Knowledge Valley</h1>
+                <h1 className=" font-bold text-2xl">Knowledge <span className='text-primary font-serif'>Valley</span></h1>
             </div>
             <div className="flex-none gap-2">
                 <div className="dropdown dropdown-end">

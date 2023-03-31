@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog = () => {
     return (
-        <div className='w-11/12 mx-auto mb-5 mt-5 lg:mt-0 '>
+        <div className='w-11/12 mx-auto mb-5 mt-5 '>
             <h1 className='text-center font-bold text-2xl bg-gray-200 py-2 rounded-sm'>My Blogs</h1>
             <div className='w-full lg:w-11/12 mx-auto'>
                 <h1 className='font-bold text-xl mt-4'>1. Props vs state.</h1>
