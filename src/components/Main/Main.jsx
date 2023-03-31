@@ -36,6 +36,7 @@ const Main = () => {
         fetch('data.json')
             .then(res => res.json())
             .then(data => setBlogs(data))
+            .catch(error => console.log(error))
     }, [])
     return (
         <div className='w-11/12 mx-auto grid grid-cols-1 lg:grid-cols-4 gap-5'>
@@ -45,7 +46,7 @@ const Main = () => {
                 }
             </div>
             <div className='col-span-4 lg:col-span-1'>
-                <Sidebar bookmark={bookmark} spendTime={spendTime}></Sidebar>
+                <Sidebar bookmark={bookmark} spendTime= {spendTime}></Sidebar>
             </div>
         </div>
     );
